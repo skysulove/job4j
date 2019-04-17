@@ -1,13 +1,13 @@
 package ru.job4j.calculate;
-	 /**
-	 * Calculate.
-	 *
-	 * @author Lex Gnatovsky
-	 */
-	 
+/**
+ * Calculate.
+ *
+ * @author Lex Gnatovsky
+ */
+
 public class Calculate {
-	
-	 /**
+
+	/**
 	 * Main.
 	 * @param args - args.
 	 */
@@ -16,12 +16,12 @@ public class Calculate {
 	}
 
 	/**
-     * Method echo.
-     * @param name Your name.
- 	 * @return Echo plus your name.
- 	 */
- 	 public String echo(String name) {
-    	return "Echo, echo, echo : " + name;
- 	}
+	 * Method echo.
+	 * @param name Your name.
+	 * @return Echo plus your name.
+	 */
+	public String echo(String name) {
+		return "Echo, echo, echo : " + name;
+	}
 
 }
