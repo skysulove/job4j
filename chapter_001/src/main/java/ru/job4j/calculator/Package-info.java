@@ -1,5 +1,5 @@
 /**
- * Package for calculate task.
+ * Package for fit task.
  *
  * @author Lex Gnatovsky
  * @version 0.2
