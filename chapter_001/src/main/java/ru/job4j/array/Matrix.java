@@ -4,7 +4,7 @@ package ru.job4j.array;
  * Класс для заполнения двухмерного массива произведением индексов массива .
  *
  * @author Lex Gnatovsky (a.gnatovsky@mail.ru)
- * @since 15.06.2019;
+ * @since 14.06.2019;
  */
 public class Matrix {
     /**

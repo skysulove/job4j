@@ -9,7 +9,7 @@ import static org.junit.Assert.assertThat;
  *
  * @author Lex Gnatovsky (a.gnatovsky@mail.ru)
  * @version 1.2;
- * @since 15.06.2019;
+ * @since 14.06.2019;
  */
 public class MatrixTest {
     /**
