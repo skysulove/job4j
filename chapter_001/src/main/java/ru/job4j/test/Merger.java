@@ -14,24 +14,24 @@ public class Merger {
      * @param right array.
      * @return 3-d combined array.
      */
-
-    public static int[] merge(int[] left, int[] right) {
-        int[] result = new int[left.length + right.length];
+    public int[] merge(int[] left, int[] right) {
         int leftIndex = 0;
         int rightIndex = 0;
-        int i = 0;
-
-        while (i < result.length) {
-            result[i] = left[leftIndex] < right[rightIndex] ? left[leftIndex++] : right[rightIndex++];
-            if (leftIndex == left.length) {
-                System.arraycopy(right, rightIndex, result, ++i, right.length - rightIndex);
-                break;
+        int[] result = new int[left.length + right.length];
+        for (int i = 0; i < result.length; i++) {
+            if (rightIndex >= right.length) {
+                result[i] = left[leftIndex];
+                leftIndex++;
+            } else if (leftIndex >= left.length) {
+                result[i] = right[rightIndex];
+                rightIndex++;
+            } else if (left[leftIndex] < right[rightIndex]) {
+                result[i] = left[leftIndex];
+                leftIndex++;
+            } else if (right[rightIndex] < left[leftIndex]) {
+                result[i] = right[rightIndex];
+                rightIndex++;
             }
-            if (rightIndex == right.length) {
-                System.arraycopy(left, leftIndex, result, ++i, left.length - leftIndex);
-                break;
-            }
-            i++;
         }
         return result;
     }
