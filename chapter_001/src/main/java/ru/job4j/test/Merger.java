@@ -15,22 +15,22 @@ public class Merger {
      * @return 3-d combined array.
      */
     public int[] merge(int[] left, int[] right) {
-        int leftIndex = 0;
-        int rightIndex = 0;
+        int lIndex = 0;
+        int rIndex = 0;
         int[] result = new int[left.length + right.length];
         for (int i = 0; i < result.length; i++) {
-            if (rightIndex >= right.length) {
-                result[i] = left[leftIndex];
-                leftIndex++;
-            } else if (leftIndex >= left.length) {
-                result[i] = right[rightIndex];
-                rightIndex++;
-            } else if (left[leftIndex] < right[rightIndex]) {
-                result[i] = left[leftIndex];
-                leftIndex++;
-            } else if (right[rightIndex] < left[leftIndex]) {
-                result[i] = right[rightIndex];
-                rightIndex++;
+            if (rIndex >= right.length) {
+                result[i] = left[lIndex];
+                lIndex++;
+            } else if (lIndex >= left.length) {
+                result[i] = right[rIndex];
+                rIndex++;
+            } else if (left[lIndex] < right[rIndex]) {
+                result[i] = left[lIndex];
+                lIndex++;
+            } else if (right[rIndex] < left[lIndex]) {
+                result[i] = right[rIndex];
+                rIndex++;
             }
         }
         return result;
